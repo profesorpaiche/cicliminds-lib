@@ -15,14 +15,14 @@ def get_datasets(path):
 
 def parse_dataset_name(f):
     parts = f.replace(".nc", "").split("_")
-    variable, period, model, scenario, init_params, timespan = parts
+    variable, period, model, scenario, init_params, timespan = parts[:6]
     timespan_from, timespan_to = timespan.split("-")
     entry = {"variable": variable,
              "frequency": period,
              "model": model,
              "scenario": scenario,
              "init_params": init_params,
-             "timespan": f'{timespan_from[:4]}-{timespan_to[:4]}'}
+             "timespan": f'{timespan_from[1:5]}-{timespan_to[:4]}'}
     return entry
 
 
