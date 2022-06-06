@@ -6,7 +6,7 @@ REFERENCE_REGIONS = regionmask.defined_regions.ar6.land
 
 
 def get_land_mask(data):
-    mask = regionmask.defined_regions.natural_earth.land_110.mask(data)
+    mask = regionmask.defined_regions.natural_earth_v5_0_0.land_110.mask(data)
     return mask == 0
 
 
